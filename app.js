@@ -11,8 +11,7 @@ app.use(express.json())
 
 
 app.use('/api/v1/tasks', tasks)
-const port = 3000
-
+const port = process.env.PORT || 3000;
 // process.env.MONGO_URI retrieves the MongoDB connection string from environment variables.
 // MONGO_URI is a env variable here
 const start = async () => {
